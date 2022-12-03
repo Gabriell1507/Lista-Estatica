@@ -148,4 +148,28 @@ int remover_final_lista(Lista *l){
     l->valor--;
     return 1;
 }
-
+int append(Lista *l, struct numero valor){
+    if(l == NULL)
+        return 0;
+    if(full_lista(l)) {
+        printf("Lista Cheia!\n");
+        return 0;
+    }
+    l->dados[l->valor] = valor;
+    l->valor++;
+    return 1;
+}
+int insert(Lista *l, struct numero valor, int pos){
+    if(l == NULL)
+        return 0;
+    if(full_lista(l)) {
+        printf("Lista Cheia!\n");
+        return 0;
+    }
+    int i;
+    for(i = l->valor - 1; i >= pos; i--)
+        l->dados[i + 1] = l->dados[i];
+    l->dados[pos] = valor;
+    l->valor++;
+    return 1;
+}

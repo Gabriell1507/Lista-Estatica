@@ -14,6 +14,8 @@ int inserir_inicio_lista(Lista *l, struct numero valor);
 int inserir_meio_lista(Lista *l, struct numero valor);
 int inserir_final_lista(Lista *l, struct numero valor);
 int inserir_ordenado_lista(Lista *l, struct numero valor);
+int insert(Lista *l, struct numero valor, int pos);
+int append(Lista *l, struct numero valor);
 
 int remover_lista(Lista *l, int valor);
 int remover_inicio_lista(Lista *l);
