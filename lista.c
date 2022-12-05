@@ -71,10 +71,10 @@ int inserir_inicio_lista(Lista *l, struct numero valor){
 }
 
 int inserir_meio_lista(Lista *l, struct numero valor){
-    /*if(l == NULL)
+    if(l == NULL)
         return  0;
     if(full_lista(l))
-        return 0;*/
+        return 0;
 }
 
 int inserir_final_lista(Lista *l, struct numero valor){
